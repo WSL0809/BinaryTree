@@ -49,6 +49,7 @@ class Solution:
 
         traversal(root)
         return res
+
     def postOrderTraversal(root: TreeNode) -> list[int]:
         res = []
 
@@ -60,9 +61,10 @@ class Solution:
             traversal(root.right)
             res.append(root.value)
 
-
         traversal(root)
         return res
+
+
 if __name__ == '__main__':
     root = TreeNode(27)
 
@@ -75,4 +77,3 @@ if __name__ == '__main__':
     print(Solution.preOrderTraversal(root))
     print(Solution.inOrderTraversal(root))
     print(Solution.postOrderTraversal(root))
-
