@@ -100,20 +100,13 @@ Queue.join() 实际上意味着等到队列为空，再执行别的操作
             ress.append(res)
         return ress
 
+    def invertTree(root: TreeNode)->TreeNode:
+        if not root:
+            return root
 
-if __name__ == '__main__':
-    root = TreeNode(27)
+        root.left, root.right = root.right, root.left
+        Solution.invertTree(root.left)
+        Solution.invertTree(root.right)
+        return root
 
-    root.insert(14)
-    root.insert(35)
-    root.insert(10)
-    root.insert(19)
-    root.insert(31)
-    root.insert(42)
-    '''
-                             
-    '''
-    # print(Solution.preOrderTraversal(root))
-    # print(Solution.inOrderTraversal(root))
-    # print(Solution.postOrderTraversal(root))
-    print(Solution.bfs(root))
+
