@@ -82,16 +82,23 @@ Queue.join() 实际上意味着等到队列为空，再执行别的操作
     @staticmethod
     def bfs(root: TreeNode):
         q = deque()
-        res = []
+        ress = []
         if root is not None:
-            q.push(root)
+            q.append(root)
         else:
-            return res
-        while not q.empty():
-            size = q.qsize()
-            while size > 0:
-                node = q.pop()
-                res = node.value
+            return ress
+        while q:
+            res = []
+            size = len(q)
+            for _ in range(size):
+                cur = q.pop()
+                res.append(cur.value)
+                if cur.left:
+                    q.append(cur.left)
+                if cur.right:
+                    q.append(cur.right)
+            ress.append(res)
+        return ress
 
 
 if __name__ == '__main__':
@@ -103,6 +110,7 @@ if __name__ == '__main__':
     root.insert(19)
     root.insert(31)
     root.insert(42)
-    print(Solution.preOrderTraversal(root))
-    print(Solution.inOrderTraversal(root))
-    print(Solution.postOrderTraversal(root))
+    # print(Solution.preOrderTraversal(root))
+    # print(Solution.inOrderTraversal(root))
+    # print(Solution.postOrderTraversal(root))
+    print(Solution.bfs(root))
