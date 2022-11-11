@@ -110,6 +110,9 @@ if __name__ == '__main__':
     root.insert(19)
     root.insert(31)
     root.insert(42)
+    '''
+                             
+    '''
     # print(Solution.preOrderTraversal(root))
     # print(Solution.inOrderTraversal(root))
     # print(Solution.postOrderTraversal(root))
