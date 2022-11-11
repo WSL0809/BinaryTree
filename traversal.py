@@ -91,7 +91,7 @@ Queue.join() 实际上意味着等到队列为空，再执行别的操作
             res = []
             size = len(q)
             for _ in range(size):
-                cur = q.pop()
+                cur = q.popleft()
                 res.append(cur.value)
                 if cur.left:
                     q.append(cur.left)
