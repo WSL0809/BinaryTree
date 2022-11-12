@@ -1,4 +1,4 @@
-from .traversal import TreeNode
+from .Solution import TreeNode
 
 
 class InvertTree:

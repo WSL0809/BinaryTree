@@ -9,6 +9,7 @@ class TreeNode:
         self.left = None
         self.right = None
 
+    # 生成二叉排序树
     def insert(self, value):
         # 将新值与父节点进行比较
         if self.value:  # 非空
@@ -109,3 +110,28 @@ Queue.join() 实际上意味着等到队列为空，再执行别的操作
         Solution.invertTree(root.left)
         Solution.invertTree(root.right)
         return root
+
+    @staticmethod
+    def levelOrderBottom(root: TreeNode):
+        stack = deque()
+        q = deque()
+        results = []
+        if root:
+            q.append(root)
+        else:
+            return results
+        while q:
+            res = []
+            size = len(q)
+            for _ in range(size):
+                cur = q.popleft()
+                res.append(cur.value)
+                if cur.left:
+                    q.append(cur.left)
+                if cur.right:
+                    q.append(cur.right)
+            stack.appendleft(res)
+        while stack:
+            tmp = stack.popleft()
+            results.append(tmp)
+        return results

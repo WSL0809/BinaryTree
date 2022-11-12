@@ -1,4 +1,4 @@
-from traversal import *
+from Solution import *
 
 
 # from InvertTree import *
@@ -19,4 +19,6 @@ class Test:
         print(Solution.inOrderTraversal(root))
         print(Solution.postOrderTraversal(root))
         print(Solution.bfs(root))
-        print(Solution.bfs(Solution.invertTree(root)))
+        print(Solution.levelOrderBottom(root))
+
+        # print(Solution.bfs(Solution.invertTree(root)))
