@@ -100,7 +100,8 @@ Queue.join() 实际上意味着等到队列为空，再执行别的操作
             ress.append(res)
         return ress
 
-    def invertTree(root: TreeNode)->TreeNode:
+    @staticmethod
+    def invertTree(root: TreeNode) -> TreeNode:
         if not root:
             return root
 
@@ -108,5 +109,3 @@ Queue.join() 实际上意味着等到队列为空，再执行别的操作
         Solution.invertTree(root.left)
         Solution.invertTree(root.right)
         return root
-
-
