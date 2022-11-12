@@ -28,6 +28,12 @@ class TreeNode:
 
 
 class Solution:
+    @staticmethod
+    def doInsert(root: TreeNode):
+        node_val = [14, 35, 10, 19, 31, 42]
+        for i in node_val:
+            root.insert(i)
+
     def preOrderTraversal(root: TreeNode) -> list[int]:
         res = []
 
