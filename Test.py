@@ -13,4 +13,4 @@ class Test:
         print(Solution.bfs(root))
         print(Solution.levelOrderBottom(root))
 
-        # print(Solution.bfs(Solution.invertTree(root)))
+    print(Solution.bfs(Solution.invertTree(root)))
