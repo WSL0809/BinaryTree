@@ -7,10 +7,10 @@ class Test:
         root = TreeNode(27)
         Solution.doInsert(root)
 
-        print(Solution.preOrderTraversal(root))
-        print(Solution.inOrderTraversal(root))
-        print(Solution.postOrderTraversal(root))
+        # print(Solution.preOrderTraversal(root))
+        # print(Solution.inOrderTraversal(root))
+        # print(Solution.postOrderTraversal(root))
         print(Solution.bfs(root))
-        print(Solution.levelOrderBottom(root))
+        # print(Solution.levelOrderBottom(root))
 
-    print(Solution.bfs(Solution.invertTree(root)))
+    # print(Solution.bfs(Solution.invertTree(root)))
