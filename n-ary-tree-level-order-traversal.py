@@ -1,5 +1,6 @@
 from collections import deque
 from Solution import TreeNode, Solution
+
 """
 #本题没有测试，懒得定义 n 叉树了
 # Definition for a Node.
@@ -8,6 +9,7 @@ class Node:
         self.val = val
         self.children = children
 """
+
 
 def levelOrder(root: TreeNode):
     res = []
@@ -28,5 +30,3 @@ def levelOrder(root: TreeNode):
 
         res.append(tmp)
     return res
-
-
